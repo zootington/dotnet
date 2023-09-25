@@ -2,10 +2,12 @@ using OpenTK;
 using OpenTK.Graphics.OpenGL;
 using OpenTK.Input;
 using OpenTK.Graphics;
+using ToolbarNS;
 
 
 public class MyGameWindow : GameWindow
 {
+    private Toolbar toolbar = new Toolbar();
     private float rotationX = 0.0f;
     private float rotationY = 0.0f;
 
@@ -27,6 +29,7 @@ public class MyGameWindow : GameWindow
         MouseUp += Mouse_ButtonUp;
         MouseMove += Mouse_Moved;
         UpdateFrame += Window_UpdateFrame;
+        RenderFrame += Window_RenderFrame;
 
     }
 
